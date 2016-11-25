@@ -1,12 +1,10 @@
-#pragma once
-#ifndef _MERPROCESS_
-#define _MERPROCESS_
-
-#include "BloomFilter.h"
 #include <string>
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <cstring>
+#include "BloomFilter.h"
+
 
 #define BUFFER 1000
 #define KMER_SIZE 20
@@ -80,7 +78,7 @@ static void CountReadKmers(string seq,
 
 		char *substrChar = new char[substr.size() + 1];
 
-		std::strcpy(substrChar, LexicographicalComprison(substr, ReverseComplement(substr)).c_str());
+		strcpy(substrChar, LexicographicalComprison(substr, ReverseComplement(substr)).c_str());
 
 		if (hashMap.count(substrChar)) {
 			hashMap[substrChar]++;
@@ -113,5 +111,3 @@ static void FindMaxFrequencyKMersInHash(vector<string> &mostFrequentMers,
 
 }
 	
-
-#endif

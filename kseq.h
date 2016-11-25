@@ -25,8 +25,7 @@ SOFTWARE.
 
 /* Last Modified: 05MAR2012 */
 
-#ifndef AC_KSEQ_H
-#define AC_KSEQ_H
+#pragma once
 
 #include <ctype.h>
 #include <string.h>
@@ -231,5 +230,3 @@ typedef struct __kstring_t {
 	extern kseq_t *kseq_init(type_t fd); \
 	void kseq_destroy(kseq_t *ks); \
 	int kseq_read(kseq_t *seq);
-
-#endif

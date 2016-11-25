@@ -1,18 +1,16 @@
-#include "stdafx.h"
+//#include "stdafx.h"
+#include "BloomFilter.h"
 #include "merprocess.h"
 #include "kseq.h"
-#include <C:/Users/recep/Desktop/zlib128-dll/include/zlib.h>
+#include <zlib.h>
 #include <iostream>
 #include <cmath>
 #include <ctime>
-
-
 
 KSEQ_INIT(gzFile, gzread);
 
 using namespace std;
 
-#include "BloomFilter.h"
 
 
 
